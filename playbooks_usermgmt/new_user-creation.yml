@@ -1,0 +1,27 @@
+---
+- hosts: testenv
+  remote_user: ansible
+
+  tasks:
+  - name: just creation for testing
+    user:
+     name: ihttpd
+     shell: /bin/bash
+     home: /var/tmp
+     comment: this is test user for ansible
+     group: admin
+     uid: 6546354
+     update_password: always
+     password: $6$rounds=656000$IIvrT.q8iyvyBRSC$p2AIPLN8D6pf0Et1W8fbrDNq63Mo3X0jDmxV7dkaVtw5SIZlh83a8nyYIuqbGaDAy5RCXHIEp8TT8qxZyOBLZ/ 
+
+  - name: just creation for testing 2nd
+    user:
+     name: check0
+     shell: /bin/bash
+     home: /var/tmp
+     comment: this is test user for ansible
+     group: admin
+     uid: 6546354
+     update_password: always
+     password: $6$mysecretsalt$b9h2NIsKn9VqwVPt2U2650IuZBZwYsK/CfkGJ6AzH1PHcNkN1jT2vh25hkQESVdoKlMZrTXui5ciYF8.VbJor.
+
